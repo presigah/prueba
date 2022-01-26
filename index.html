@@ -1,0 +1,524 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+<style>
+    body {
+        background-color: yellow;
+    }
+
+    /*NAV*/
+    .brand {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .site-header {
+        position: relative;
+        background-color: #fff;
+    }
+
+    .site-header__wrapper {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    @media (min-width: 600px) {
+        .site-header__wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+
+    @media (min-width: 600px) {
+        .nav__wrapper {
+            display: flex;
+        }
+    }
+
+    .nav__item a {
+        display: block;
+        padding: 1.5rem 1rem;
+    }
+
+    .nav__toggle {
+        display: none;
+    }
+
+    .wrapper {
+        max-width: 1140px;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    *,
+    *:before,
+    *:after {
+        box-sizing: border-box;
+    }
+
+    a {
+        text-decoration: none;
+        color: #222;
+    }
+
+    .sr-only {
+        position: absolute;
+        clip: rect(1px, 1px, 1px, 1px);
+        padding: 0;
+        border: 0;
+        height: 1px;
+        width: 1px;
+        overflow: hidden;
+    }
+
+    .button {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        color: #fff;
+        background-color: #2fa0f6;
+        min-width: 120px;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    .button svg {
+        display: inline-block;
+        vertical-align: middle;
+        width: 24px;
+        height: 24px;
+        fill: #fff;
+    }
+
+    .button span {
+        display: none;
+    }
+
+    @media (min-width: 600px) {
+        .button span {
+            display: initial;
+        }
+    }
+
+
+    @media (max-width: 599px) {
+        .nav__toggle {
+            display: block;
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+        }
+    }
+
+    @media (max-width: 850px) {
+        .nav__wrapper {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            left: 0;
+            z-index: 2;
+            background-color: #fff;
+            visibility: hidden;
+            opacity: 0;
+            transform: translateY(-100%);
+            transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+        }
+
+        .nav__wrapper.active {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /*Para version mobile*/
+    @media (max-width: 576px) {
+
+        /* Cabecer principal */
+        .cabecera_principal {
+            border: none;
+            width: 100%;
+            margin-top: none;
+        }
+
+        .container{
+            width: 100% !important;
+        }
+    }
+
+    .button--icon {
+        min-width: initial;
+        padding: 0.5rem;
+    }
+</style>
+
+
+
+<div style="background-color: rgb(27, 27, 1342); justify-content: right;">
+    <div class="container">
+
+        <!-- Grid row-->
+        <div class="row py-2 d-flex">
+            <!-- Grid column -->
+            <div class="col text-md-right" style="margin-left: 50%;">
+                <!-- Facebook -->
+                <a class="fb-ic " style="color: #fff;">
+                    <i class="fab fa-facebook-f white-text mr-4"> </i>
+                </a>
+                <!-- Twitter -->
+                <a class="tw-ic" style="color: #fff;">
+                    <i class="fab fa-twitter white-text mr-4"> </i>
+                </a>
+                <!--Instagram-->
+                <a class="ins-ic" style="color: #fff;">
+                    <i class="fab fa-instagram white-text"> </i>
+                </a>
+
+            </div>
+            <!-- Grid column -->
+        </div>
+        <!-- Grid row-->
+
+    </div>
+</div>
+
+
+<!-- Header Start -->
+<header class="site-header">
+    <nav>
+        <div class="wrapper site-header__wrapper">
+            <img src="https://s3.amazonaws.com/eventtia/event_files/96145/original/1116431399481643139948.png?1643139948"
+                alt="">
+            <nav class="nav">
+                <button class="nav__toggle" aria-expanded="false" type="button">
+                    menu
+                </button>
+                <ul class="nav__wrapper" style="list-style: none;">
+                    <li class="nav__item"><a href="#">About Seanergy</a></li>
+                    <li class="nav__item"><a href="#">Exhibition</a></li>
+                    <li class="nav__item"><a href="#">Get involved</a></li>
+                    <li class="nav__item"><a href="#">Practical informations</a></li>
+                    <li class="nav__item"><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </nav>
+</header>
+<!-- Header End -->
+
+<div class="container shadow-lg bg-white rounded cabecera_principal"
+    style="border: solid 5px rgba(0, 0, 0, 0.089); width: 70%; margin-top: 50px; ">
+
+    <!-- IMG HEADER -->
+    <img src="https://s3.amazonaws.com/eventtia/event_files/96139/original/banner16431390381643139038.png?16431390380"
+        class="img-fluid" alt="Responsive image" style="max-width: 103.5%; height: auto; margin-left: -1.79%;">
+    <!--  END -->
+
+    <!-- START INFORMATION CARDS -->
+    <div class="container" style="padding-top: 50px;">
+        <div class="box">
+            <div class="container">
+                <div class="container">
+                    <img src="https://s3.amazonaws.com/eventtia/event_files/96144/original/text116431394511643139451.png?1643139451"
+                        class="img-fluid" alt="Responsive image" width="70%" style="margin-left: 15%;" text-aling:>
+                </div>
+                <br><br>
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 py-5">
+                        <div class="box-part text-center">
+                            <img src="https://s3.amazonaws.com/eventtia/event_files/96143/original/icon116431392981643139298.png?1643139298"
+                                class="img-fluid" alt="">
+                            <div class="title">
+                                <h5><b>EXHIBITION</b></h5>
+                            </div>
+                            <div class="text">
+                                <span>
+                                    <b>230 exhibitors </b>gather under one roof for two days to showcase the newest
+                                    technologies and present their latest innovation & research projects.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 py-5">
+                        <div class="box-part text-center">
+                            <img src="https://s3.amazonaws.com/eventtia/event_files/96146/original/icon216431400081643140008.png?1643140008"
+                                class="img-fluid" alt="">
+                            <div class="title">
+                                <h5><b>TALKS & PANEL DISCUSSIONS</b></h5>
+                            </div>
+                            <div class="text">
+                                <span> <b>+80 speakers</b> share their experience on topics selected by a program
+                                    committee
+                                    composed of field experts.</span>
+                            </div>
+                            <br> <br>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 py-5">
+                        <div class="box-part text-center">
+                            <img src="https://s3.amazonaws.com/eventtia/event_files/96147/original/icon316431403891643140389.png?1643140389"
+                                class="img-fluid" alt="">
+                            <div class="title">
+                                <h5><b>B2B MEETINGS</b></h5>
+                            </div>
+                            <div class="text">
+                                <span> <b></b>organized between visitors and exhibitors, to meet targeted
+                                    companies and decision-makers for long-term business relationships.</span>
+                            </div>
+                            <br> <br>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="box-part text-center">
+                            <img src="https://s3.amazonaws.com/eventtia/event_files/96148/original/icon416431407351643140735.png?1643140735"
+                                class="img-fluid" alt="">
+                            <div class="title">
+                                <h5>NETWORKING</h5>
+                            </div>
+                            <div class="text">
+                                <span>Lorem ipsum dolor sit amet, id quo eruditi eloquentiam. Assum decore te sed. Elitr
+                                    scripta
+                                    ocurreret qui ad.</span>
+                            </div>
+                            <br><br>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="box-part text-center">
+                            <img src="https://s3.amazonaws.com/eventtia/event_files/96149/original/icon516431408641643140864.png?1643140864"
+                                class="img-fluid" alt="">
+                            <div class="title">
+                                <h5>TECHNICAL VISITS</h5>
+                            </div>
+                            <div class="text">
+                                <span>Lorem ipsum dolor sit amet, id quo eruditi eloquentiam. Assum decore te sed. Elitr
+                                    scripta
+                                    ocurreret qui ad.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="box-part text-center">
+                            <img src="https://s3.amazonaws.com/eventtia/event_files/96150/original/icon616431411251643141125.png?1643141125"
+                                class="img-fluid" alt="">
+                            <div class="title">
+                                <h4>LIVE DEMOS</h4>
+                            </div>
+                            <div class="text">
+                                <span>Lorem ipsum dolor sit amet, id quo eruditi eloquentiam. Assum decore te sed. Elitr
+                                    scripta
+                                    ocurreret qui ad.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- END INFORMATION CARDS -->
+
+    <!-- HORIZONTAL CARD -->
+    <div class="container" style="width: 103%; margin-left: -1.3%; padding-top: 50px;">
+        <!-- Card Start -->
+        <div class="card">
+            <div class="row bg-primary">
+                <!-- Carousel start -->
+                <div class="col-md-6 bg-primary">
+                    <div id="CarouselTest" class="carousel slide" style="margin-left: -4.5%;" data-ride="carousel">
+
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="d-block"
+                                    src="https://s3.amazonaws.com/eventtia/event_files/96153/original/image116431449651643144965.png?1643144965"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of carousel -->
+                <div class="col-md-6 bg-primary">
+                    <div class="card-block">
+                        <h1 class="card-title py-5" style="color: #fff ;"><b> SECURE YOUR STAND FOR 2022 </b></h1>
+                        <p class="card-text">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries
+                        </p>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of card -->
+    </div>
+    <!-- End of primary-container -->
+</div>
+
+
+<!-- IMG VIDEO -->
+<div class="container" style="margin-top: 50px;">
+    <img src="https://s3.amazonaws.com/eventtia/event_files/96154/original/text216431486831643148683.png?1643148683"
+        class="img-fluid" style="width:70%; margin-left: 14%;" alt="Responsive image">
+</div>
+<!--  END -->
+
+
+<!-- VIDEO-->
+
+<div class="container"
+    style="width: 50%; margin-top: 20px; border: solid 1px #fff; background-color: #fff; padding: 10px; border-radius: 5px;">
+
+    <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/amDMZ5tSysY" allowfullscreen></iframe>
+    </div>
+</div>
+
+
+<!-- GALERY -->
+
+<div class="container my-5 shadow-lg bg-white rounded" style="width: 70%; border: 4px solid rgba(0, 0, 0, 0.089);  ">
+    <div class="card" style="width: 103%; margin-left: -1.5%;">
+        <div class="row">
+            <div class="col-sm-6">
+                <img class="d-block" style="width: 104%;"
+                    src="https://s3.amazonaws.com/eventtia/event_files/96156/original/image316431554771643155477.png?1643155477"
+                    alt="">
+            </div>
+            <div class="col-sm-6">
+                <div class="card-block">
+                    <h4 class="card-title" style="padding-top: 20%; margin-left: 7%;">Small card</h4>
+                    <p style="margin-left: 7%;">Copy paste the HTML and CSS.</p>
+                    <p style="margin-left: 7%;">Change around the content for awsomenes</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card-block">
+                    <h4 class="card-title" style="padding-top: 20%; margin-left: 7%;">Small card</h4>
+                    <p style="margin-left: 7%;">Copy paste the HTML and CSS.</p>
+                    <p style="margin-left: 7%;">Change around the content for awsomenes</p>
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <img class="d-block" style="margin-left: -2.7%; width: 103%;"
+                    src="https://s3.amazonaws.com/eventtia/event_files/96155/original/image216431554641643155464.png?1643155464"
+                    alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--
+----------------------
+-->
+<section>
+
+    <footer>
+
+        <div class="container" style="border: 2px solid black;">
+            <div class="row ">
+                <div class="col-md-4">
+                    <img src="https://s3.amazonaws.com/eventtia/event_files/95060/large/testpictoexpo16414698111641469811.png?1641469811"
+                        class="img-fluid" alt="">
+                </div>
+
+                <div class="col-md-6">
+                    <div class="container">
+                        <div class="row ">
+
+                            <div class="col-lg-3 col-md-6">
+                                <h3>NAVIGATION</h3>
+                                <ul>
+                                    <li><a href="#" class="text-foot"><i class="mdi mdi-chevron-right mr-1"></i> San
+                                            Francisco</a></li>
+                                    <li><a href="#" class="text-foot"><i class="mdi mdi-chevron-right mr-1"></i>
+                                            Tokio</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="col-lg-3 col-md-6">
+                                <ul>
+                                    <li><a href="#" class="text-foot"><i class="mdi mdi-chevron-right mr-1"></i> San
+                                            Francisco</a></li>
+                                    <li><a href="#" class="text-foot"><i class="mdi mdi-chevron-right mr-1"></i>
+                                            Tokio</a></li>
+                                </ul>
+
+                            </div>
+
+                            <div class="col-lg-3 col-md-6">
+                                <ul>
+                                    <li><a href="#" class="text-foot"><i class="mdi mdi-chevron-right mr-1"></i> San
+                                            Francisco</a></li>
+                                    <li><a href="#" class="text-foot"><i class="mdi mdi-chevron-right mr-1"></i>
+                                            Tokio</a></li>
+                                </ul>
+
+                            </div>
+
+                            <div class="col-lg-3 col-md-6">
+                                <ul>
+                                    <li><a href="#" class="text-foot"><i class="mdi mdi-chevron-right mr-1"></i> San
+                                            Francisco</a></li>
+                                    <li><a href="#" class="text-foot"><i class="mdi mdi-chevron-right mr-1"></i>
+                                            Tokio</a></li>
+                                </ul>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-2">
+
+                </div>
+
+            </div>
+        </div>
+
+    </footer>
+
+
+</section>
+
+
+<script>
+    let navToggle = document.querySelector(".nav__toggle");
+    let navWrapper = document.querySelector(".nav__wrapper");
+
+    navToggle.addEventListener("click", function () {
+        if (navWrapper.classList.contains("active")) {
+            this.setAttribute("aria-expanded", "false");
+            this.setAttribute("aria-label", "menu");
+            navWrapper.classList.remove("active");
+        } else {
+            navWrapper.classList.add("active");
+            this.setAttribute("aria-label", "close menu");
+            this.setAttribute("aria-expanded", "true");
+        }
+    });
+
+</script>
