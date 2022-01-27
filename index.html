@@ -27,22 +27,6 @@
         padding-bottom: 1rem;
     }
 
-    @media (min-width: 600px) {
-        .site-header__wrapper {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 0;
-            padding-bottom: 0;
-        }
-    }
-
-    @media (min-width: 600px) {
-        .nav__wrapper {
-            display: flex;
-        }
-    }
-
     .nav__item a {
         display: block;
         padding: 1.5rem 1rem;
@@ -105,6 +89,8 @@
         display: none;
     }
 
+
+
     @media (min-width: 600px) {
         .button span {
             display: initial;
@@ -134,33 +120,40 @@
             transform: translateY(-100%);
             transition: transform 0.3s ease-out, opacity 0.3s ease-out;
         }
-
-        .nav__wrapper.active {
-            visibility: visible;
-            opacity: 1;
-            transform: translateY(0);
+        .contenedor{
+            width: 100% !important ;
+            max-width: none !important;
         }
     }
 
-    /*Para version mobile*/
-    @media (max-width: 576px) {
-
-        /* Cabecer principal */
-        .cabecera_principal {
-            border: none;
-            width: 100%;
-            margin-top: none;
+    @media (min-width: 600px) {
+        .site-header__wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 0;
+            padding-bottom: 0;
         }
+    }
 
-        .container{
-            width: 100% !important;
+    @media (min-width: 600px) {
+        .nav__wrapper {
+            display: flex;
         }
+    }
+
+    .nav__wrapper.active {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
     }
 
     .button--icon {
         min-width: initial;
         padding: 0.5rem;
     }
+
+
 </style>
 
 
